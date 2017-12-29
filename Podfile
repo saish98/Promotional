@@ -8,4 +8,5 @@ target 'Promotional App' do
   # Pods for Promotional App
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
+    pod 'Firebase/Messaging'
 end

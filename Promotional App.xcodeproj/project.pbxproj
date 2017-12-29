@@ -13,7 +13,7 @@
 		87ADCFCD1FF2099000042816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87ADCFCB1FF2099000042816 /* Main.storyboard */; };
 		87ADCFCF1FF2099000042816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87ADCFCE1FF2099000042816 /* Assets.xcassets */; };
 		87ADCFD21FF2099000042816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87ADCFD01FF2099000042816 /* LaunchScreen.storyboard */; };
-		87ADCFDA1FF2099C00042816 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87ADCFD91FF2099C00042816 /* GoogleService-Info.plist */; };
+		87B2B5891FF60D1A007E2B85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87B2B5881FF60D19007E2B85 /* GoogleService-Info.plist */; };
 		87D81D561FF3843D003AAF7E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D81D551FF3843D003AAF7E /* Constant.swift */; };
 		87D81D581FF38654003AAF7E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D81D571FF38654003AAF7E /* Event.swift */; };
 		87F7A7EA1FF37C37008570AC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7A7E81FF37C37008570AC /* EventCell.swift */; };
@@ -32,7 +32,8 @@
 		87ADCFCE1FF2099000042816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87ADCFD11FF2099000042816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87ADCFD31FF2099000042816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87ADCFD91FF2099C00042816 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87B2B5881FF60D19007E2B85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		87B2B58A1FF67776007E2B85 /* Promotional App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Promotional App.entitlements"; sourceTree = "<group>"; };
 		87D81D551FF3843D003AAF7E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		87D81D571FF38654003AAF7E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		87F7A7E81FF37C37008570AC /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		87ADCFC61FF2099000042816 /* Promotional App */ = {
 			isa = PBXGroup;
 			children = (
+				87B2B58A1FF67776007E2B85 /* Promotional App.entitlements */,
 				87ADCFC71FF2099000042816 /* AppDelegate.swift */,
 				87ADCFC91FF2099000042816 /* ViewController.swift */,
 				874AC55F1FF57CD6001B43E1 /* EventDetailViewController.swift */,
@@ -91,7 +93,7 @@
 				87ADCFCE1FF2099000042816 /* Assets.xcassets */,
 				87ADCFD01FF2099000042816 /* LaunchScreen.storyboard */,
 				87ADCFD31FF2099000042816 /* Info.plist */,
-				87ADCFD91FF2099C00042816 /* GoogleService-Info.plist */,
+				87B2B5881FF60D19007E2B85 /* GoogleService-Info.plist */,
 				87D81D551FF3843D003AAF7E /* Constant.swift */,
 				87D81D571FF38654003AAF7E /* Event.swift */,
 			);
@@ -141,7 +143,12 @@
 				TargetAttributes = {
 					87ADCFC31FF2099000042816 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -169,8 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				87ADCFD21FF2099000042816 /* LaunchScreen.storyboard in Resources */,
-				87ADCFDA1FF2099C00042816 /* GoogleService-Info.plist in Resources */,
 				87ADCFCF1FF2099000042816 /* Assets.xcassets in Resources */,
+				87B2B5891FF60D1A007E2B85 /* GoogleService-Info.plist in Resources */,
 				87F7A7EB1FF37C37008570AC /* EventCell.xib in Resources */,
 				87ADCFCD1FF2099000042816 /* Main.storyboard in Resources */,
 			);
@@ -398,13 +405,17 @@
 			baseConfigurationReference = AFA86B34F869A6DE518C66AD /* Pods-Promotional App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Promotional App/Promotional App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Heady Dev (FK54HA69S3)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W8YR43228J;
 				INFOPLIST_FILE = "Promotional App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Heady.Promotional-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.heady.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a79b028b-5eb1-49fd-b32f-efe6753e666c";
+				PROVISIONING_PROFILE_SPECIFIER = TEST_PROFILE;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -415,13 +426,17 @@
 			baseConfigurationReference = 1CBFB26DE9208AADFEBC44F5 /* Pods-Promotional App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = "Promotional App/Promotional App.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Heady Dev (FK54HA69S3)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = W8YR43228J;
 				INFOPLIST_FILE = "Promotional App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Heady.Promotional-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.heady.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a79b028b-5eb1-49fd-b32f-efe6753e666c";
+				PROVISIONING_PROFILE_SPECIFIER = TEST_PROFILE;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

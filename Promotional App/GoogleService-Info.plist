@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>5515334895-7sn2qk8jpf96qvb45tb1216am5o4kcoe.apps.googleusercontent.com</string>
+	<string>5515334895-1q3a6461t92m666joig5icufa7tdtpf5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.5515334895-7sn2qk8jpf96qvb45tb1216am5o4kcoe</string>
+	<string>com.googleusercontent.apps.5515334895-1q3a6461t92m666joig5icufa7tdtpf5</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCf-XD3Yx9Xa6oJQkNSA2_I4xfV7ePhvVM</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.headybeta</string>
+	<string>com.heady.test</string>
 	<key>PROJECT_ID</key>
 	<string>promotional-app</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:5515334895:ios:b5f6492e983b322b</string>
+	<string>1:5515334895:ios:c4f22bf882aeac1a</string>
 	<key>DATABASE_URL</key>
 	<string>https://promotional-app.firebaseio.com</string>
 </dict>

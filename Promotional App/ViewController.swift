@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseInstanceID
+import FirebaseMessaging
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +24,8 @@ class ViewController: UIViewController {
         initObjects()
         initFirebase()
         registerCell()
+        
+//        Messaging.messaging().subscribe(toTopic: <#T##String#>)
     }
     
     override func viewWillAppear(_ animated: Bool) {
